@@ -80,3 +80,16 @@ function callFunc(fn, cnt){
 callFunc(fn, 3);
 
 
+
+function fn1(num){
+    return num+1;
+}
+function fn2(num){
+    return num*num;
+}
+
+function applyFun(fn1, fn2, value){
+    return fn2(fn1(value));
+}
+
+console.log(applyFun(fn1, fn2, 5));

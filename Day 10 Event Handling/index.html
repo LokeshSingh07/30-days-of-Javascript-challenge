@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: #c9c9c9;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        div{
+            margin: 20px 0;
+        }
+        input{
+            padding: 5px;
+            border-radius: 5px;
+            border-color: 1px  solid rgb(241, 241, 241);
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p id="evHn">This is paragraph</p>
+        <button id="btn">click me!</button>
+    </div>
+
+    <div>
+        <img src="https://picsum.photos/200/300" alt=""
+            width="200"
+            height="200"
+            id="myImage"
+        >
+    </div>
+
+    <div>
+        <button id="btn1">change backgrund</button>
+    </div>
+
+    <div>
+        <input type="text" id="keyEv">
+    </div>
+
+    <div>
+        <input type="text" id="keyEv2">
+        <p id="para2">This is para</p>
+    </div>
+
+
+    <div>
+        <form action="" id="submit-form">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    
+    <div>    
+        <form id="dropdownForm">
+            <label for="dropdown">Choose an option</label>
+            <select name="dropdown" id="dropdown">
+                <option value="1">option 1</option>
+                <option value="2">option 2</option>
+                <option value="3">option 3</option>
+            </select>
+        </form>
+        <p id="selectedValue"></p>
+    </div>
+
+
+    <div>
+        <ul id="myList">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+
+
+    <div id="parent">
+        <button id="addItem">Add Item</button>
+        <ul id="dynamicList">
+            
+        </ul>
+    </div>
+
+
+
+
+
+
+    <script src="./index.js"></script>
+    
+</body>
+</html>

@@ -319,8 +319,68 @@ console.log("node : ", node);
 
 
 // Task 8: Implement a BinaryTree class with methods for inserting values and performing in-order traversal to display nodes.
+class BinaryTree{
+    constructor(){
+        this.root = null;
+    }
+
+    // Method to add node in BT
+    insert(val){
+        const newNode = new TreeNode(val);
+        if(!this.root){
+            this.root = newNode;
+        }
+        else{
+            this._insertNode(this.root, newNode);
+        }
+    }
+
+    _insertNode(root, newNode){
+        if(newNode.value < root.value){
+            if(!root.left){
+                root.left = newNode;
+            }
+            else{
+                this._insertNode(root.left, newNode)
+            }
+            
+        }
+        else{
+            if(!root.right){
+                root.right = newNode;
+            }
+            else{
+                this._insertNode(root.right, newNode)
+            }
+        }
+    }
 
 
+    // inorder traversal
+    inorderTraversal(root){
+        if(!root) return null;
+
+        this.inorderTraversal(root.left);
+        console.log(root.value);
+        this.inorderTraversal(root.right);
+    }
+
+    inorderTraversalFromRoot(){
+        this.inorderTraversal(this.root);
+    }
+
+}
+
+const tree = new BinaryTree();
+tree.insert(8);
+tree.insert(3);
+tree.insert(6);
+tree.insert(4);
+tree.insert(1);
+tree.insert(10);
+
+console.log("In-order traversal of the binary tree:");
+tree.inorderTraversalFromRoot();
 
 
 
